@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rania Hermiz Portfolio</title>
+<style>
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f8ff; /* sky blue shade */
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #00bfff;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+.navbar a:hover {
+  background-color: white;
+  color: #00bfff;
+  border-radius: 4px;
+}
+
+/* Hero Image with Text */
+.hero {
+  position: relative;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+/* Columns */
+.columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+}
+.column {
+  background-color: white;
+  padding: 1rem;
+  width: 40%;
+  height: 200px;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* Centered Image */
+.center-image {
+  text-align: center;
+  margin: 2rem 0;
+}
+.styled-image {
+  border-radius: 15px;
+  filter: grayscale(20%) brightness(1.1);
+  width: 300px;
+}
+
+/* Table Styling */
+.table-section {
+  padding: 2rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #00bfff;
+  color: white;
+}
+
+/* Hover on Paragraph */
+.hover-text p {
+  text-align: center;
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.hover-text p:hover {
+  color: #00bfff;
+  transform: scale(1.1);
+}
+
+/* Image Overlay Fade */
+.img-container {
+  position: relative;
+  width: 400px;
+  margin: 2rem auto;
+}
+.img-container img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 191, 255, 0.7);
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.img-container:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Video Section */
+.video-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Video Overlay Section */
+.video-overlay-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+.video-overlay-container video {
+  width: 100%;
+  display: block;
+}
+.video-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #00bfff;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+
+</style>
+</head>
+<body>
+
+  <!-- Fixed Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#image">Image</a></li>
+      <li><a href="#table">Table</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with Text Overlay -->
+  <section class="hero">
+    <img src="https://cdn.pixabay.com/photo/2018/10/05/10/56/landscape-3725657_1280.jpg" alt="Banner">
+    <div class="hero-text">Welcome to My Portfolio</div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="columns">
+    <div class="column">This is the left column. It contains some sample content.</div>
+    <div class="column">This is the right column. It contains more sample content.</div>
+  </section>
+
+  <!-- Centered Image with Filters -->
+  <section id="image" class="center-image">
+    <h2>Filtered & Rounded Image</h2>
+    <img src="https://cdn.pixabay.com/photo/2017/06/10/16/33/double-exposure-2390185_1280.jpg" alt="Profile Image" class="styled-image" />
+  </section>
+
+  <!-- Table -->
+  <section id="table" class="table-section">
+    <h2>Sample Table</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Rania Hermiz</td>
+        <td>Designer</td>
+        <td>Canada</td>
+      </tr>
+      <tr>
+        <td>Rania Hermiz</td>
+        <td>Developer</td>
+        <td>Canada</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Hover Effect on Paragraph -->
+  <section class="hover-text">
+    <p>Hover over this paragraph to see the effect!</p>
+  </section>
+
+  <!-- Image Overlay Fade -->
+  <section class="image-overlay">
+    <div class="img-container">
+      <img src="https://cdn.pixabay.com/photo/2019/09/12/19/55/water-4472520_1280.jpg" alt="Fade Image" />
+      <div class="overlay-text">Overlay Text</div>
+    </div>
+  </section>
+
+  <!-- Autoplay Video -->
+  <section class="video-section">
+    <h2>Autoplay Video</h2>
+    <video autoplay muted loop width="100%" height="auto">
+      <source src="https://cdn.pixabay.com/video/2018/04/24/15779-266806346_tiny.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+  </section>
+
+  <!-- Video With Text Overlay -->
+  <section class="video-overlay-container">
+    <video autoplay muted loop>
+      <source src="https://cdn.pixabay.com/video/2024/02/21/201308-915375262_tiny.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay-text">Overlay on Video</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rania Hermiz Portfolio</p>
+  </footer>
+
+</body>
+</html>
